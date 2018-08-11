@@ -66,12 +66,6 @@ module.exports = {
       from: './src/views/',
       test: /\.html/,
     }]),
-    new CleanWebpackPlugin(
-      'dist',
-      {
-        exclude: '.git',
-        dry: false,
-      },
-    ),
+    new CleanWebpackPlugin('dist'),
   ],
 };
