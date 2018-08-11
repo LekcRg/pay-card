@@ -30,8 +30,8 @@
     "webpack-dev-server": "^3.1.5"
   },
   "scripts": {
-    "build": "webpack --production",
-    "dev": "webpack-dev-server"
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode=development"
   },
   "keywords": [],
   "author": "",
