@@ -1,0 +1,26 @@
+.navigation {
+  width: 33%;
+  &__list {
+    list-style-type: none;
+  }
+  &__link {
+    padding: 28px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    background: #191c24;
+    font-size: 18px;
+    transition: background .4s ease,
+    color .4s ease;
+    text-shadow: 0 1px 0 rgba(#000, .15);
+    &:hover, &--active {
+      background: #2a2d37;
+      color: #808592;
+    }
+    &--active {
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+}

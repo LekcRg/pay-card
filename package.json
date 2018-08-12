@@ -19,6 +19,7 @@
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.13.0",
+    "file-loader": "^1.1.11",
     "import-glob-loader": "^1.1.0",
     "mini-css-extract-plugin": "^0.4.1",
     "node-sass": "^4.9.3",

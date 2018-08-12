@@ -1,15 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-	<link rel="stylesheet" href="style.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pay card</title>
+  <link rel="stylesheet" href="style.min.css">
 </head>
 <body>
-	<h1>HI WORLD!</h1>
-	<h2>This text for test. More test. MOREEEE. EZ, IT WORKS</h2>
-	<script src="bundle.js"></script>
+  <div class="wrapper">
+    <div class="container">
+      <!-- Начало навигации -->
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class='navigation__item'><a class='navigation__link' href="#">Личный кабинет</a></li>
+          <li class='navigation__item'><a class='navigation__link navigation__link--active' href="#">Платежи</a></li>
+          <li class='navigation__item'><a class='navigation__link' href="#">История платежей</a></li>
+          <li class='navigation__item'><a class='navigation__link' href="#">Настройки</a></li>
+          <li class='navigation__item'><a class='navigation__link' href="#">Выйти</a></li>
+        </ul>
+      </nav>
+      <!-- Конец навигации -->
+      <main class="maincontent">
+        <!-- Начало секции с оплатой -->
+        <section class="pay">
+          <div class="pay-information">
+            <span>Информация по оплате:</span>
+            <table class="pay-table">
+              <tr>
+                <td class="pay-table__td pay-table__title">Номер счета:</td>
+                <td class='pay-table__td pay-table__info'>87123658716587</td>
+              </tr>
+              <tr>
+                <td class="pay-table__td pay-table__title">Сумма платежа:</td>
+                <td class='pay-table__td pay-table__info'>100 руб.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="pay-card">
+            <h3 class="title">Данные банковской карты</h3>
+            <div class="card-wrapper">
+              <div class="card card__front">
+                <div class="card__row">
+                  <label for="number" class="card__label">Номер карты</label>
+                </div>
+                <div class="card__row">
+                  <input type="text" id="number" class="card__input card__number">
+                  <input type="text" class="card__input card__number">
+                  <input type="text" class="card__input card__number">
+                  <input type="text" class="card__input card__number">
+                </div>
+                <div class="card__row">
+                  <label for="validity" class="card__label">Срок действия</label>
+                </div>
+                <div class="card__row ">
+                  <select class='card__select' name="validity-months" id="validity-months">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                  <select class='card__select' name="validity-years" id="validity-years">
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                  </select>
+                </div>
+                <div class="card__row">
+                  <input type="text" class="card__input card__holder" placeholder="Держатель карты">
+                </div>
+              </div>
+              <div class="card card__back">
+                <div class="card__row card__row--cvv card__row--cvv-label">
+                  <label for="validity" class="card__label">Код CVV2 / CVC2</label>
+                </div>
+                <div class="card__row card__row--cvv">
+                  <input type="text" class="card__input card__cvv">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Конец секции с оплатой -->
+        <!-- Начало футера -->
+        <footer class="footer">
+          <span class="footer__text">
+            Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
+          </span>
+          <span class="footer__text">
+            Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
+          </span>
+          <span class="footer__text">
+            Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
+          </span>
+          <span class="footer__text">
+            Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
+          </span>
+        </footer>
+        <!-- Конец футера -->
+      </main>
+    </div>
+  </div>
+
+  <script src="bundle.js"></script>
 </body>
 </html>

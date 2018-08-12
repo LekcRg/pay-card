@@ -44,6 +44,9 @@ module.exports = {
           },
           {
             loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+            },
           },
           {
             loader: 'sass-loader',
@@ -53,6 +56,15 @@ module.exports = {
           },
           {
             loader: 'import-glob-loader',
+          },
+        ],
+      },
+      {
+        test: /\.(woff|woff2|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
           },
         ],
       },
@@ -66,6 +78,15 @@ module.exports = {
       from: './src/views/',
       test: /\.html/,
     }]),
-    new CleanWebpackPlugin('dist'),
+    new CopyWebpackPlugin([{
+      from: './src/fonts/',
+      to: './fonts',
+    }]),
+    new CleanWebpackPlugin(
+      'dist',
+      {
+        exclude: ['.git'],
+      },
+    ),
   ],
 };
