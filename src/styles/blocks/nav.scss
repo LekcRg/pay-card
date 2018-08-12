@@ -3,6 +3,12 @@
   @include tablet {
     width: 100%;
   }
+  &__item {
+    border-bottom: 1px solid #20232b;
+    &:last-child {
+      border: none;
+    }
+  }
   &__btn {
     display: none;
     @include tablet {
@@ -49,10 +55,16 @@
     color: #fff;
     text-decoration: none;
     font-family: 'Open Sans';
-    background: #191c24;
+    background: #1f2229;
     font-size: 18px;
     text-shadow: 0 1px 0 rgba(#000, .15);
     transition: all .4s ease;
+    &--darken {
+      background: #191c24;
+    }
+    &--exit {
+      color: #808592;
+    }
     &:hover, &--active {
       background: #2a2d37;
       color: #808592;
