@@ -43,12 +43,13 @@ form.validate({
   errorPlacement() {
     return false;
   },
-  submitHandler: (form) => {
-    form.append('Данные введены правильно');
+  submitHandler: (forma) => {
+    forma.append('Данные введены правильно');
   },
 });
 
-// Для валидатора только буквы и пробел
+// Для валидатора
+// Только буквы и пробел
 $.validator.addMethod('lettersonly', function (value, element) {
   return this.optional(element) || /^[a-z ]+$/i.test(value);
 }, 'Letters only please');
