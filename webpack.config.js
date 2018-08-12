@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/scripts/index.js',
@@ -88,5 +89,8 @@ module.exports = {
         exclude: ['.git'],
       },
     ),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+    }),
   ],
 };

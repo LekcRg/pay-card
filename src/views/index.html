@@ -39,17 +39,17 @@
           </div>
           <div class="pay-card">
             <h3 class="title">Данные банковской карты</h3>
-            <form action="">
+            <form id="card-form" name="form">
               <div class="card-wrapper">
                 <div class="card card__front">
                   <div class="card__row">
-                    <label for="number" class="card__label">Номер карты</label>
+                    <label for="card-number" class="card__label">Номер карты</label>
                   </div>
                   <div class="card__row">
-                    <input type="text" id="number" class="card__input card__number">
-                    <input type="text" class="card__input card__number">
-                    <input type="text" class="card__input card__number">
-                    <input type="text" class="card__input card__number">
+                    <input maxlength="4" type="text" name="number1" id="card-number" class="card__input card__number">
+                    <input maxlength="4" type="text" name="number2" class="card__input card__number">
+                    <input maxlength="4" type="text" name="number3" class="card__input card__number">
+                    <input maxlength="4" type="text" name="number4" class="card__input card__number">
                   </div>
                   <div class="card__row">
                     <label for="validity" class="card__label">Срок действия</label>
@@ -83,7 +83,7 @@
                     </select>
                   </div>
                   <div class="card__row">
-                    <input type="text" class="card__input card__holder" placeholder="Держатель карты">
+                    <input type="text" name="holder" class="card__input card__holder" placeholder="Держатель карты">
                   </div>
                 </div>
                 <div class="card card__back">
@@ -91,7 +91,7 @@
                     <label for="validity" class="card__label">Код CVV2 / CVC2</label>
                   </div>
                   <div class="card__row card__row--cvv">
-                    <input type="text" class="card__input card__cvv">
+                    <input maxlength="3" type="text" id='validity' name="cvv" class="card__input card__cvv">
                   </div>
                 </div>
               </div>
@@ -121,5 +121,6 @@
   </div>
 
   <script src="bundle.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script> -->
 </body>
 </html>
