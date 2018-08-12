@@ -100,3 +100,24 @@
     }
   }
 }
+
+.card__row--cvv {
+  position: relative;
+}
+.cvv-hint {
+  font-size: 16px;
+  border: 1px solid #bec6cf;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  height: 26px;
+  width: 26px;
+  position: absolute;
+  right: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+}
