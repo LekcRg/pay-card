@@ -39,61 +39,64 @@
           </div>
           <div class="pay-card">
             <h3 class="title">Данные банковской карты</h3>
-            <div class="card-wrapper">
-              <div class="card card__front">
-                <div class="card__row">
-                  <label for="number" class="card__label">Номер карты</label>
+            <form action="">
+              <div class="card-wrapper">
+                <div class="card card__front">
+                  <div class="card__row">
+                    <label for="number" class="card__label">Номер карты</label>
+                  </div>
+                  <div class="card__row">
+                    <input type="text" id="number" class="card__input card__number">
+                    <input type="text" class="card__input card__number">
+                    <input type="text" class="card__input card__number">
+                    <input type="text" class="card__input card__number">
+                  </div>
+                  <div class="card__row">
+                    <label for="validity" class="card__label">Срок действия</label>
+                  </div>
+                  <div class="card__row ">
+                    <select class='card__select' name="validity-months" id="validity-months">
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                    <select class='card__select' name="validity-years" id="validity-years">
+                      <option value="2018">2018</option>
+                      <option value="2019">2019</option>
+                      <option value="2020">2020</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                      <option value="2023">2023</option>
+                      <option value="2024">2024</option>
+                      <option value="2025">2025</option>
+                      <option value="2026">2026</option>
+                      <option value="2027">2027</option>
+                    </select>
+                  </div>
+                  <div class="card__row">
+                    <input type="text" class="card__input card__holder" placeholder="Держатель карты">
+                  </div>
                 </div>
-                <div class="card__row">
-                  <input type="text" id="number" class="card__input card__number">
-                  <input type="text" class="card__input card__number">
-                  <input type="text" class="card__input card__number">
-                  <input type="text" class="card__input card__number">
-                </div>
-                <div class="card__row">
-                  <label for="validity" class="card__label">Срок действия</label>
-                </div>
-                <div class="card__row ">
-                  <select class='card__select' name="validity-months" id="validity-months">
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                  </select>
-                  <select class='card__select' name="validity-years" id="validity-years">
-                    <option value="2018">2018</option>
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
-                    <option value="2025">2025</option>
-                    <option value="2026">2026</option>
-                    <option value="2027">2027</option>
-                  </select>
-                </div>
-                <div class="card__row">
-                  <input type="text" class="card__input card__holder" placeholder="Держатель карты">
+                <div class="card card__back">
+                  <div class="card__row card__row--cvv card__row--cvv-label">
+                    <label for="validity" class="card__label">Код CVV2 / CVC2</label>
+                  </div>
+                  <div class="card__row card__row--cvv">
+                    <input type="text" class="card__input card__cvv">
+                  </div>
                 </div>
               </div>
-              <div class="card card__back">
-                <div class="card__row card__row--cvv card__row--cvv-label">
-                  <label for="validity" class="card__label">Код CVV2 / CVC2</label>
-                </div>
-                <div class="card__row card__row--cvv">
-                  <input type="text" class="card__input card__cvv">
-                </div>
-              </div>
-            </div>
+              <button class='card__button'type='submit'>Оплатить</button>
+            </form>
           </div>
         </section>
         <!-- Конец секции с оплатой -->
