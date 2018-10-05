@@ -1,3 +1,4 @@
+// import $ from 'jquery';
 import validate from 'jquery-validation';
 
 const form = $('#card-form');
@@ -50,9 +51,7 @@ form.validate({
 
 // Для валидатора
 // Только буквы и пробел
-$.validator.addMethod('lettersonly', function (value, element) {
-  return this.optional(element) || /^[a-z ]+$/i.test(value);
-}, 'Letters only please');
+$.validator.addMethod('lettersonly', (value, element) => this.optional(element) || /^[a-z ]+$/i.test(value), 'Letters only please');
 
 const cardNumberInput = document.querySelectorAll('.card__number');
 

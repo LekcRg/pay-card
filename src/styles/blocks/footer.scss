@@ -3,12 +3,14 @@
   display: block;
   background: #373c43;
   padding: 30px 25px;
+
   &__text {
     font-size: 12px;
     color: #89909d;
     display: block;
     margin-bottom: 15px;
-    &:last-child{ 
+
+    &:last-child {
       margin-bottom: 0;
     }
   }
