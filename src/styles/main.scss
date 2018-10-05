@@ -4,3 +4,19 @@
 @import './layout/base.scss';
 @import './layout/fonts.scss';
 @import './blocks/*.scss';
+
+.test {
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../images/11111.png);
+}
+
+.test-svg {
+  width: 250px;
+  height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../images/test.svg);
+}

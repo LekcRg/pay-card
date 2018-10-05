@@ -5,22 +5,14 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   entry: './src/scripts/index.js',
+  mode: 'production',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 3000,
-    open: true,
-    watchContentBase: true,
-  },
-  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -42,21 +34,12 @@ module.exports = {
           },
           {
             loader: 'css-loader',
-            options: {
-              sourceMap: true,
-            },
           },
           {
             loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-            },
           },
           {
             loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-            },
           },
           {
             loader: 'import-glob-loader',
@@ -94,16 +77,16 @@ module.exports = {
               outputPath: 'images/',
             },
           },
-          // {
-          //   loader: 'svgo-loader',
-          //   options: {
-          //     plugins: [
-          //       { removeTitle: true },
-          //       { convertColors: { shorthex: false } },
-          //       { convertPathData: false },
-          //     ],
-          //   },
-          // },
+          {
+            loader: 'svgo-loader',
+            options: {
+              plugins: [
+                { removeTitle: true },
+                { convertColors: { shorthex: false } },
+                { convertPathData: false },
+              ],
+            },
+          },
         ],
       },
     ],
@@ -134,6 +117,5 @@ module.exports = {
       logo: path.resolve(__dirname, 'logo45.png'),
       suppressSuccess: true,
     }),
-    // new BundleAnalyzerPlugin(),
   ],
 };
